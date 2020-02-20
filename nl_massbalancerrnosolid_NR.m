@@ -4,12 +4,12 @@
 function [X,F,J,C] = nl_massbalancerrnosolid_NR(X,Asolution,Ksolution,T)
 
 [Nc,Nx]=size(Asolution); %Xsolution=X(1:Nx);
-criteria=1e-16;
+criteria=1e-15;
 
 for i=1:1000
 
 logC=(Ksolution)+Asolution*log10(X); C=10.^(logC); % calc species
-R=Asolution'*C-T; 
+R=Asolution'*C-T;
 
 % Evaluate the Jacobian 
    z=zeros(Nx,Nx); 
