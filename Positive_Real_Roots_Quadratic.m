@@ -6,9 +6,10 @@ clear
 % end of housekeeping
 
 %plot -s 600,500 -f 'svg'
-a=1; Ka=5.009933e-5; AT=0.1; 
-b=Ka;
-c=-AT*Ka
+MgT=0.04492e-6; Kw=1e-14;
+a=1;
+b=2*MgT;
+c=-Kw;
 t=roots([a b c]); %finds the roots
 t=t(imag(t)==0); %sets any imaginary roots to zero
 % display the positive real root
