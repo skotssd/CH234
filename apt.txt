@@ -1,4 +1,7 @@
-octave
 gnuplot
 ghostscript
-
+octave
+xvfb
+fonts-freefont-otf
+libgl1-mesa-dri
+mesa-utils
